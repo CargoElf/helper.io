@@ -6,8 +6,9 @@ get "/reports/new" do
   erb :"/reports/new"
 end
 
-get "reports/:id" do
+get "/reports/:id" do
   @report = Report.find(params[:id])
+  erb :"/reports/show"
 end
 
 post "/reports" do
